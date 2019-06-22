@@ -1,1 +1,1 @@
-# CryptoNewsCosolidator
+# CryptoNewsConsolidator
