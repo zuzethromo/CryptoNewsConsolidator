@@ -1,5 +1,5 @@
 body {
-    background-image: url("/assets/images/blackorchid_@2X.jpg");
+    background-image: url("/assets/images/fabric_of_squares_gray_@2X.png");
 }
 .name {
     width: auto;
@@ -16,37 +16,34 @@ body {
     overflow: hidden;
     padding: 20px;
     padding-left: 95px;
-    background-color: black;
+    background-color: rgb(213, 213, 219);
 }
 .mission {
     position: absolute;
-    top: 115px;
+    top: 112px;
     left: 540px;
-    background-color: black;
-    color: rgb(142, 142, 151);
+    color: rgb(82, 82, 179);
     font-family: 'Times New Roman';
 }
 
 .realTime {
     position: absolute;
-    top: 115px;
+    top: 112px;
     left: 670px;
-    background-color: black;
-    color: rgb(142, 142, 151);
+    color: rgb(82, 82, 179);
     font-family: 'Times New Roman';
 }
 
 .news {
     position: absolute;
-    top: 115px;
+    top: 112px;
     left: 760px;
-    background-color: black;
-    color: rgb(142, 142, 151);
+    color: rgb(82, 82, 179);
     font-family: 'Times New Roman';
 }
 
 h2 {
-    color: white;
+    color: black;
     font-family: 'Times New Roman';
     font-size: 50px;
     padding-top: 10px;
@@ -54,7 +51,7 @@ h2 {
 }
 
 .content {
-    background-color: black;
+    background-color: rgb(213, 213, 219);
     display: block;
     width: 800px; 
     height: 300px;     
@@ -62,9 +59,9 @@ h2 {
     top: 15px;
     left: 60px;
     margin: 70px;
-    color: white;
+    color: black;
     font-family: 'Times New Roman';
-    border: 2px solid rgb(4, 4, 104);
+    border: 5px solid rgb(4, 4, 104);
 }
 p {
     padding-top: 10px;
@@ -72,20 +69,20 @@ p {
     font-size: 20px;
 }
 .content2 {
-    background-color: black;
+    background-color: rgb(213, 213, 219);
     display: block;
     width: 200px; 
     height: 300px;     
     position: relative;
-    top: -359px;
+    top: -364px;
     left: 915px;
     margin: 70px;
-    color: white;
+    color: black;
     font-family: 'Times New Roman';
-    border: 2px solid rgb(7, 85, 7);
+    border: 5px solid rgb(7, 85, 7);
 }
 .content3 {
-    background-color: black;
+    background-color: rgb(213, 213, 219);
     display: block;
     width: 1055px; 
     height: 200px;     
@@ -93,11 +90,70 @@ p {
     top: -355px;
     left: 60px;
     margin: 70px;
-    color: white;
+    color: black;
     font-family: 'Times New Roman';
-    border: 2px solid rgb(7, 85, 7);
+    border: 5px solid rgb(7, 85, 7);
 }
 
 .crypto {
     font-size: 25px;
+}
+
+h3 {
+    font-family: 'Times New Roman';
+    font-size: 25px;
+    padding-top: 25px;
+    padding-left: 10px;
+}
+
+#inputSearch {
+    width: 90%;
+    padding: 10px 10px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid rgb(53, 51, 51);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#button {
+
+    background-color: rgb(213, 213, 219);
+    border: none;
+    color: black;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+    border-radius: 6px;
+
+}
+.content4 {
+    background-color: rgb(213, 213, 219);
+    display: block;
+    width: 1000px; 
+    height: 600px;     
+    position: relative;
+    top: 15px;
+    left: 140px;
+    margin: 70px;
+    color: black;
+    font-family: 'Times New Roman';
+    border: 5px solid rgb(4, 4, 104);
+
+}
+
+.textInput {
+    border-radius: 5px;
+    background-color: #150388;
+    padding: 20px;
+}
+
+.word {
+    color: green;
+    font-style: italic;
 }
