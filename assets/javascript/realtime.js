@@ -12,7 +12,7 @@ $.ajax({
 }).then(function(response) {
   let URL = (response.data);
   console.log(response);
-  $('#body').append(response);
+  $('#content').append(response);
 });
 
 //let recentSearch = [];
