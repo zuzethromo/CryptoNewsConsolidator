@@ -13,6 +13,9 @@ $('#button').on("click",function(){
  /*  $('#headlines').empty();
     $('#snippets').empty();
     $('#newsLinks').empty(); */
+    $('#newHeadlineOnSearch').empty();
+    $('#newSnippetsOnSearch').empty();
+    $('#newNewsLinksOnSearch').empty();
 
 for(let i =0; i<2; i++){
 $.ajax({
@@ -24,12 +27,12 @@ $.ajax({
     let link = articleUrl.link(articleUrl); //turning URLs to clickable links for user
     let snippet =  response.response.docs[i].snippet;
 
-    $('#headlines').append(i+1 +": "+ headline);
-    $('#headlines').append("<p></p>");
-    $('#snippets').append(i+1 +": "+ snippet);
-    $('#snippets').append("<p></p>");
-    $('#newsLinks').append(i+1 +": "+ link); 
-    $('#newsLinks').append("<p></p>");
+    $('#newHeadlineOnSearch').append(i+1 +": "+ headline);
+    $('#newHeadlineOnSearch').append("<p></p>");
+    $('#newSnippetsOnSearch').append(i+1 +": "+ snippet);
+    $('#newSnippetsOnSearch').append("<p></p>");
+    $('#newNewsLinksOnSearch').append(i+1 +": "+ link); 
+    $('#newNewsLinksOnSearch').append("<p></p>");
 })
 }
 })
