@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- <link href="assets/css/reset.css" rel="stylesheet" type="text/css"> -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body>
+    <header class="header">
+
+        <h1 class="name">Crypto News Consolidator</h1>
+
+        <a class="mission" href="index.html">Our Mission</a>
+        <a class="realTime" href="realtime.html">Stocks</a>
+        <a class="news" href="news.html">News</a>
+
+    </header>
+
+    <table id='myTable' class="table table-striped table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">thumbnail</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Sparkline/7d</th>
+            </tr>
+        </thead>
+        <tbody id="stock-table-body"></tbody>
+    </table>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-</head>
-<body>
-        <header class="header">
-
-                <h1 class="name">Crypto News Consolidator</h1>
-        
-                <a class="mission" href="index.html">Our Mission</a>
-                <a class="realTime" href="realtime.html">Stocks</a>
-                <a class="news" href="news.html">News</a>
-                            
-            </header>
-                
-        <div class="content">
-            <h4>Stocks</h4>
-        <div class="stockInfo">
-        
-        
-        </div>
-        </div>
-        
-        
-
-<script src="assets/javascript/realtime.js"></script>
-
+    <script src="assets/javascript/realtime.js"></script>
 </body>
 </html>
