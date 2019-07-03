@@ -8,8 +8,11 @@
 
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-
+    
+    <!--jQuery.js Library CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Chart.js Library CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 
 </head>
 <body>
@@ -48,8 +51,31 @@
 
 <div class="content3">
 
+        <canvas id="myChart"></canvas>
 </div>
 
 
 </body>
+
+<script>
+        let data = [12,235];
+        let labels = ["Monday","Tuesday"];
+        renderChart(data, labels);
+
+    function renderChart(data, labels) {
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'This week',
+                data: data,
+            }]
+        },
+    });
+}
+</script>
+
+
 </html>

@@ -9,10 +9,6 @@ $('#button').on("click", function () {
     let apiKey = "api-key=n7kN1nsbvcCZ4ymY8aA7OAgd2dNWkzD3"
     let queryURL = (/* "https://cors-anywhere.herokuapp.com/" + */ api + query + apiKey);
 
-    //Removes headlines, snippets, and news links h1s so adjust
-    /*  $('#headlines').empty();
-       $('#snippets').empty();
-       $('#newsLinks').empty(); */
     $('#newHeadlineOnSearch').empty();
     $('#newSnippetsOnSearch').empty();
     $('#newNewsLinksOnSearch').empty();
@@ -36,12 +32,4 @@ $('#button').on("click", function () {
         })
     }
 })
-
-/* julio@LAPTOP-VOTLS07I MINGW64 ~/Documents/Bootcamp/Projects/CryptoNewsConsolidator (julio)
-$ git push
-fatal: The current branch julio has no upstream branch.
-To push the current branch and set the remote as upstream, use
-
-    git push --set-upstream origin julio */
-
 
