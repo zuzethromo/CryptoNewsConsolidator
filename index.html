@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,14 @@
 
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    
+
     <!--jQuery.js Library CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--Chart.js Library CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 
 </head>
+
 <body>
     <header class="header">
 
@@ -22,59 +24,75 @@
 
         <a class="mission" href="index.html">Our Mission</a>
         <a class="realTime" href="realtime.html">Stocks</a>
-        <a class="news" href="news.html">News</a>   
-            
+        <a class="news" href="news.html">News</a>
+
     </header>
 
-<div class="content">
-    <h2>Mission Statement</h2>
+    <div class="content">
+        <h2>Mission Statement</h2>
 
-    <p>
-    </p>
-    <p>
-        Our goal is to educate potential investors in Cryptocurrency by providing real time data and news articles to make an informed decision.
-        
-    </p>
-    <p>
+        <p>
+        </p>
+        <p>
+            Our goal is to educate potential investors in Cryptocurrency by providing real time data and news articles
+            to make an informed decision.
 
-    </p>  
-</div>
+        </p>
+        <p>
 
-<div class="content2">
-    <p class="crypto"> "A <span class="word">cryptocurrency</span> is a digital currency that is created and managed through the use of advanced encryption
-        techniques know as cryptography." 
-    </p>
-    <p class="credit">
-         - Investopedia
-    </p>
-</div>
+        </p>
+    </div>
 
-<div class="content3">
+    <div class="content2">
+        <p class="crypto"> "A <span class="word">cryptocurrency</span> is a digital currency that is created and managed
+            through the use of advanced encryption
+            techniques know as cryptography."
+        </p>
+        <p class="credit">
+            - Investopedia
+        </p>
+    </div>
+
+    <div class="content3">
 
         <canvas id="myChart"></canvas>
-</div>
+    </div>
 
 
 </body>
 
 <script>
-        let data = [12,235];
-        let labels = ["Monday","Tuesday"];
-        renderChart(data, labels);
+    let queryURL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=25&page=1&sparkline=true';
+    let price =[];
+    let date = [];
 
-    function renderChart(data, labels) {
-    var ctx = document.getElementById("myChart").getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: 'This week',
-                data: data,
-            }]
-        },
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+         let current_price = (response[0].current_price);
+         let last_updated = (response[0].last_updated);
+        price.push(current_price);
+        date.push("LAST UPDATED: " + last_updated);
+        renderChart(price, date);
+        
     });
-}
+    
+    //Chart.js library being used to create chart
+    function renderChart(price, date) {
+        console.log(price)    
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: date,
+                datasets: [{
+                    label: 'Bitcoin',
+                    data: price,
+                }]
+            },
+        });
+    }
 </script>
 
 
