@@ -33,7 +33,7 @@ function buildSparkline(priceData) {
     const max = Math.max.apply(null, priceData);
     console.log(priceData.sort((a, b) => a - b));
     const graphData = {
-        labels: ['0','1','2','3','4','5','6','7','168'],//['1', '2', '3', '4', '5', '6', '7'], 
+        labels: ['0','1','2','3','4','5','6','7'], //
         datasets: [{
             label: 'Cryptocurrency',
             backgroundColor: 'white', 
@@ -51,7 +51,7 @@ function buildSparkline(priceData) {
 $(document).on('click', '.sparklineButton', function (event) {
     const currentSparklineId = event.currentTarget.dataset.sparkline_id;
     const currentSparklineData = coingeckoResponse[currentSparklineId]
-    $('#exampleModalLabel').text(`7 Day Behavior - ${currentSparklineId}`);
+    $('#exampleModalLabel').text(`7 Day Sparkline - ${currentSparklineId}`);
     buildSparkline(currentSparklineData, currentSparklineId);
 });
 
