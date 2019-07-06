@@ -18,6 +18,16 @@ body {
     padding-left: 95px;
     background-color: rgb(213, 213, 219);
 }
+
+.headerRealtime {
+    overflow: hidden;
+    padding: 20px;
+    padding-left: 95px;
+    background-color: rgb(213, 213, 219);
+    display:block;
+    height:135px;
+
+}
 .mission {
     position: absolute;
     top: 112px;
@@ -157,3 +167,4 @@ h3 {
     color: green;
     font-style: italic;
 }
+
